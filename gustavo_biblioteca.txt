@@ -62,7 +62,7 @@ INSERT into aluno_cliente (nome, dataNascimento, celular, turma) VALUES
 ('Marian Nicolau', 'goleironamariannicolau@contato.com.br', '2004-04-11', '2F'),
 ('Mariana Bertolino', 'maribert@gmail.com', '2004-06-25', '2I'),
 ('Gordon Banks', 'bigbanks@bol.com', '2005-12-30', '1A'),
-('Amaral Oliveira', 'amaraldoolho@yahoo.com', '2004-02-28', '2C'),
+('Amaral Oliveira', 'amaraldoolho@yahoo.com', '2004-02-28', '2B'),
 ('Antoine Walter', 'antwalt001@gmail.com.br', '2005-01-05', '1B');
 
 INSERT into livro (titulo, autor, editora, genero) VALUES
