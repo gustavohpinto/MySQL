@@ -49,33 +49,33 @@ FOREIGN KEY(codLivro) REFERENCES livro (codLivro)
 );
 
 INSERT into bibliotecario (nome, email, data_nascimento, cpf, telefone, cidade, uf) VALUES
-('Ivanildo Pereira', 'ivanildopereira015@gmail.com', '1973-09-02', '467.546.568-14', '94824-4646', 'Ribeir„o Pires', 'SP'),
-('Carlos Alberto', 'calberto11@hotmail.com', '2000-03-22', '263.378.76-21', '97374-4734', 'Mau·', 'SP'),
+('Ivanildo Pereira', 'ivanildopereira015@gmail.com', '1973-09-02', '467.546.568-14', '94824-4646', 'Ribeir√£o Pires', 'SP'),
+('Carlos Alberto', 'calberto11@hotmail.com', '2000-03-22', '263.378.76-21', '97374-4734', 'Mau√°', 'SP'),
 ('Lorraine Maria', 'llmaria987@yahoo.com.br', '1991-11-14', '373.693.945-44', '96734-8364', 'Rio Grande da Serra', 'SP');
 
 INSERT into aluno_cliente (nome, dataNascimento, celular, turma) VALUES
-('Luana Capossi', 'lubritto@gmail.com', '2006-03-13', '9B'),
+('Luana Capossi', 'lubritto@gmail.com', '2002-03-13', '3B'),
 ('Gustavo Pinto', 'gustavopinto11@hotmail.com', '2004-09-23', '2C'),
-('Jo„o Victor Morais', 'jv021@yahoo.com.br', '2003-10-21', '2C'),
-('Jo„o Pedro Morais', 'jpmoraisdsn@gmail.com', '2003-10-21', '2C'),
-('Lorenzo Piatieri', 'lcp2039@hotmail.com', '2010-06-18', '5D'),
-('Marian Nicolau', 'goleironamariannicolau@contato.com.br', '1996-04-11', '2F'),
+('Jo√£o Victor Morais', 'jv021@yahoo.com.br', '2003-10-21', '2C'),
+('Jo√£o Pedro Morais', 'jpmoraisdsn@gmail.com', '2003-10-21', '2C'),
+('Lorenzo Piatieri', 'lcp2039@hotmail.com', '2003-06-18', '3F'),
+('Marian Nicolau', 'goleironamariannicolau@contato.com.br', '2004-04-11', '2F'),
 ('Mariana Bertolino', 'maribert@gmail.com', '2004-06-25', '2I'),
-('Gordon Banks', 'bigbanks@bol.com', '1937-12-30', '1A'),
-('Amaral Oliveira', 'amaraldoolho@yahoo.com', '1973-02-28', '2C'),
-('Antoine Walter', 'antwalt001@gmail.com.br', '1981-01-05', '1B');
+('Gordon Banks', 'bigbanks@bol.com', '2005-12-30', '1A'),
+('Amaral Oliveira', 'amaraldoolho@yahoo.com', '2004-02-28', '2C'),
+('Antoine Walter', 'antwalt001@gmail.com.br', '2005-01-05', '1B');
 
 INSERT into livro (titulo, autor, editora, genero) VALUES
 ('A garota do lago', 'Charlie Donlea', 'Faro Editorial', 'Romance'),
 ('O conto do Aia', 'Margaret Atwood', 'Rocco', 'Romance'),
-('O Homem de Giz', 'C. J. Tudor', 'IntrÌseca', 'Romance'),
-('O Milagre da Manh„', 'Hal Elrod', 'BestSeller', 'Autoajuda'),
+('O Homem de Giz', 'C. J. Tudor', 'Intr√≠seca', 'Romance'),
+('O Milagre da Manh√£', 'Hal Elrod', 'BestSeller', 'Autoajuda'),
 ('Pai Rico, Pai Pobre', 'Robert Kiyosaki', 'Alta Books', 'Autoajuda'),
-('Escravid„o', 'Laurentino Gomes', 'Globo Livros', 'N„o-FicÁ„o'),
-('A Cinco Passos de VocÍ', 'Rachael Lippincott', 'Globo', 'InfantoJuvenil'),
-('O Poder da AÁ„o Para CrianÁas', 'Paulo Vieira', 'Gente', 'InfantoJuvenil'),
-('Cem Anos de Solid„o', 'Gabriel GarcÌa M·rquez', 'Record', 'Romance'),
-('Um Esc‚ndalo na BoÍmia', 'Arthur Conan Doyle', 'Record', 'MistÈrio');
+('Escravid√£o', 'Laurentino Gomes', 'Globo Livros', 'N√£o-Fic√ß√£o'),
+('A Cinco Passos de Voc√™', 'Rachael Lippincott', 'Globo', 'InfantoJuvenil'),
+('O Poder da A√ß√£o Para Crian√ßas', 'Paulo Vieira', 'Gente', 'InfantoJuvenil'),
+('Cem Anos de Solid√£o', 'Gabriel Garc√≠a M√°rquez', 'Record', 'Romance'),
+('Um Esc√¢ndalo na Bo√™mia', 'Arthur Conan Doyle', 'Record', 'Mist√©rio');
 
 INSERT into emprestimo_devolucao (codFuncionario, codLivro, ra, data_emprestimo, data_devolucao) VALUES
 (1, 2, 3, '2019-05-03', '2019-05-18'),
