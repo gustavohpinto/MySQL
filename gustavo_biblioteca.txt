@@ -1,0 +1,90 @@
+create database biblioteca;
+use biblioteca;
+
+CREATE TABLE aluno_cliente (
+ra int PRIMARY KEY auto_increment,
+dataNascimento date,
+nome varchar(200),
+telfixo varchar(200),
+email varchar(200) unique,
+turma varchar(200),
+celular varchar(200)
+);
+
+CREATE TABLE livro (
+codLivro int PRIMARY KEY auto_increment,
+titulo varchar(200),
+editora varchar(200),
+autor varchar(200),
+genero varchar(200)
+);
+
+CREATE TABLE bibliotecario (
+codFuncionario int PRIMARY KEY auto_increment,
+nome varchar(200),
+telefone varchar(200),
+rg varchar(200) unique,
+cpf varchar(200) unique,
+email varchar(200) unique,
+data_nascimento date,
+logradouro varchar(200),
+num varchar(200),
+complemento varchar(200),
+bairro varchar(200),
+cidade varchar(200),
+uf char(2),
+cep varchar(200)
+);
+
+CREATE TABLE emprestimo_devolucao (
+codEmprestimo int PRIMARY KEY auto_increment,
+data_emprestimo date,
+data_devolucao date,
+ra int,
+codFuncionario int,
+codLivro int,
+FOREIGN KEY(ra) REFERENCES aluno_cliente (ra),
+FOREIGN KEY(codFuncionario) REFERENCES bibliotecario (codFuncionario),
+FOREIGN KEY(codLivro) REFERENCES livro (codLivro)
+);
+
+INSERT into bibliotecario (nome, email, data_nascimento, cpf, telefone, cidade, uf) VALUES
+('Ivanildo Pereira', 'ivanildopereira015@gmail.com', '1973-09-02', '467.546.568-14', '94824-4646', 'Ribeirão Pires', 'SP'),
+('Carlos Alberto', 'calberto11@hotmail.com', '2000-03-22', '263.378.76-21', '97374-4734', 'Mauá', 'SP'),
+('Lorraine Maria', 'llmaria987@yahoo.com.br', '1991-11-14', '373.693.945-44', '96734-8364', 'Rio Grande da Serra', 'SP');
+
+INSERT into aluno_cliente (nome, dataNascimento, celular, turma) VALUES
+('Luana Capossi', 'lubritto@gmail.com', '2006-03-13', '9B'),
+('Gustavo Pinto', 'gustavopinto11@hotmail.com', '2004-09-23', '2C'),
+('João Victor Morais', 'jv021@yahoo.com.br', '2003-10-21', '2C'),
+('João Pedro Morais', 'jpmoraisdsn@gmail.com', '2003-10-21', '2C'),
+('Lorenzo Piatieri', 'lcp2039@hotmail.com', '2010-06-18', '5D'),
+('Marian Nicolau', 'goleironamariannicolau@contato.com.br', '1996-04-11', '2F'),
+('Mariana Bertolino', 'maribert@gmail.com', '2004-06-25', '2I'),
+('Gordon Banks', 'bigbanks@bol.com', '1937-12-30', '1A'),
+('Amaral Oliveira', 'amaraldoolho@yahoo.com', '1973-02-28', '2C'),
+('Antoine Walter', 'antwalt001@gmail.com.br', '1981-01-05', '1B');
+
+INSERT into livro (titulo, autor, editora, genero) VALUES
+('A garota do lago', 'Charlie Donlea', 'Faro Editorial', 'Romance'),
+('O conto do Aia', 'Margaret Atwood', 'Rocco', 'Romance'),
+('O Homem de Giz', 'C. J. Tudor', 'Intríseca', 'Romance'),
+('O Milagre da Manhã', 'Hal Elrod', 'BestSeller', 'Autoajuda'),
+('Pai Rico, Pai Pobre', 'Robert Kiyosaki', 'Alta Books', 'Autoajuda'),
+('Escravidão', 'Laurentino Gomes', 'Globo Livros', 'Não-Ficção'),
+('A Cinco Passos de Você', 'Rachael Lippincott', 'Globo', 'InfantoJuvenil'),
+('O Poder da Ação Para Crianças', 'Paulo Vieira', 'Gente', 'InfantoJuvenil'),
+('Cem Anos de Solidão', 'Gabriel García Márquez', 'Record', 'Romance'),
+('Um Escândalo na Boêmia', 'Arthur Conan Doyle', 'Record', 'Mistério');
+
+INSERT into emprestimo_devolucao (codFuncionario, codLivro, ra, data_emprestimo, data_devolucao) VALUES
+(1, 2, 3, '2019-05-03', '2019-05-18'),
+(2, 7, 3, '2019-05-03', '2019-05-18'),
+(3, 1, 8, '2019-05-05', '2019-05-20'),
+(2, 4, 7, '2019-05-10', '2019-05-25'),
+(2, 3, 3, '2019-05-11', '2019-05-26'),
+(1, 5, 1, '2019-05-15', '2019-05-30'),
+(1, 2, 2, '2019-05-23', '2019-06-07'),
+(3, 9, 5, '2019-05-23', '2019-06-07'),
+(1, 10, 9, '2019-05-25', '2019-06-09'),
+(3, 1, 4, '2019-05-29', '2019-06-13');
