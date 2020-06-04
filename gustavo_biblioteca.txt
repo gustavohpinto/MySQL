@@ -48,10 +48,10 @@ FOREIGN KEY(codFuncionario) REFERENCES bibliotecario (codFuncionario),
 FOREIGN KEY(codLivro) REFERENCES livro (codLivro)
 );
 
-INSERT into bibliotecario (nome, email, data_nascimento, cpf, telefone, cidade, uf) VALUES
-('Ivanildo Pereira', 'ivanildopereira015@gmail.com', '1973-09-02', '467.546.568-14', '94824-4646', 'Ribeirão Pires', 'SP'),
-('Carlos Alberto', 'calberto11@hotmail.com', '2000-03-22', '263.378.76-21', '97374-4734', 'Mauá', 'SP'),
-('Lorraine Maria', 'llmaria987@yahoo.com.br', '1991-11-14', '373.693.945-44', '96734-8364', 'Rio Grande da Serra', 'SP');
+INSERT into bibliotecario (nome, email, data_nascimento, cpf, telefone, logradouro, num, cidade, uf) VALUES
+('Ivanildo Pereira', 'ivanildopereira015@gmail.com', '1973-09-02', '467.546.568-14', 'Rua Belgica', '123', '94824-4646', 'Ribeirão Pires', 'SP'),
+('Carlos Alberto', 'calberto11@hotmail.com', '2000-03-22', '263.378.76-21', 'Av. Barão de Mauá', '45', '97374-4734', 'Mauá', 'SP'),
+('Lorraine Maria', 'llmaria987@yahoo.com.br', '1991-11-14', '373.693.945-44', 'Rua do Progresso', '65', '96734-8364', 'Rio Grande da Serra', 'SP');
 
 INSERT into aluno_cliente (nome, dataNascimento, celular, turma) VALUES
 ('Luana Capossi', 'lubritto@gmail.com', '2002-03-13', '3B'),
